@@ -41,7 +41,7 @@ export default async function Page({ params }: PageProps) {
           );
         })}
       </div>
-      <p className="whitespace-pre text-wrap py-5 leading-relaxed md:w-[80vw] lg:w-[50vw]">
+      <p className="whitespace-pre text-wrap py-5 text-justify leading-relaxed md:w-[80vw] lg:w-[50vw]">
         {artwork?.description}
       </p>
     </section>
