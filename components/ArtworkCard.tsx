@@ -24,7 +24,7 @@ export default function ArtworkCard({
   return (
     <Link
       href={`/artworks/${slug}`}
-      className="group relative flex h-[100vw] w-[80vw] flex-col items-center justify-center md:h-[40vw] md:w-[32vw] lg:h-[35vw] lg:w-[28vw]"
+      className="group relative flex aspect-[4/5] w-full flex-col items-center justify-center"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
