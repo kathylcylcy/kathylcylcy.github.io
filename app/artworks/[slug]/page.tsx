@@ -27,9 +27,11 @@ export default async function Page({ params }: PageProps) {
         {artwork &&
           artwork.images.map((image) => {
             return (
-              <div className="relative flex h-[100vw] w-[80vw] items-center justify-center md:h-[50vw] md:w-[40vw]">
+              <div
+                key={artwork.slug}
+                className="relative flex h-[100vw] w-[80vw] items-center justify-center md:h-[50vw] md:w-[40vw]"
+              >
                 <Image
-                  key={artwork.slug}
                   src={image}
                   alt={artwork.name}
                   fill
