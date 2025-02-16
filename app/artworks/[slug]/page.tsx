@@ -1,5 +1,6 @@
 import { artworks } from "@/constants";
 import Image from "next/image";
+import Placeholder from "@/public/images/placeholder.png";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -34,7 +35,9 @@ export default async function Page({ params }: PageProps) {
                 src={image}
                 alt={artwork.name}
                 fill
-                unoptimized
+                placeholder="blur"
+                blurDataURL={Placeholder.src}
+                sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw"
                 className="object-contain"
               />
             </div>

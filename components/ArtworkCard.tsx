@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Placeholder from "@/public/images/placeholder.png";
 
 interface ArtworkCardProps {
   slug: string;
@@ -36,7 +37,9 @@ export default function ArtworkCard({
         src={src}
         alt={alt}
         fill
-        unoptimized
+        placeholder="blur"
+        blurDataURL={Placeholder.src}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className="-z-10 object-cover group-hover:brightness-50"
       />
     </Link>
