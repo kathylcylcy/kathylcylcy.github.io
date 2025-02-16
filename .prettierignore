@@ -1,0 +1,6 @@
+# Build artifacts
+.next
+dist
+build
+
+node_modules
